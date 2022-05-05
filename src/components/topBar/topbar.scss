@@ -1,0 +1,103 @@
+@import "../../global.scss";
+
+.topbar {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  color: $mainColor;
+  position: fixed;
+  top: 0;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    // for other web
+    display: none;
+  }
+  z-index: 3;
+  transition: all 1s ease;
+  .wrapper {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        font-size: 40px;
+        font-weight: 400;
+        text-decoration: none;
+        color: inherit;
+        margin-right: 20px;
+      }
+
+      .itemContainer {
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+
+        .icon {
+          font-size: 18px;
+          margin-right: 5px;
+        }
+        span {
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .right {
+      .hamburger {
+        width: 32px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          // for other web
+          display: none;
+        }
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: $mainColor;
+          transform-origin: left;
+          transition: all 2s ease;
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: $mainColor;
+    color: white;
+    a {
+      color: whitesmoke;
+    }
+    .hamburger {
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        // for other web
+        display: none;
+      }
+      span {
+        &:first-child {
+          background-color: white;
+
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
