@@ -55,18 +55,22 @@
         position: absolute;
         font-size: 20px;
       }
-      img {
+      a{
+img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: 1;
+         
       }
+       z-index: 1;
+      }
+      
       &:hover {
         background-color: $mainColor;
-        img {
+        a{img {
           opacity: 0.2;
           z-index: 0;
-        }
+        }}
       }
     }
   }

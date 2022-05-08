@@ -63,13 +63,18 @@ const Portfolio = () => {
         ))}
       </ul>
       <div className="container">
-        {data ? data.map((d) => (
-          <div className="item">
-            <img src={d.img} alt="" />
-            <h3>{d.title}</h3>
-          </div>
-        )) : <h1 >I will lern too</h1>}
-        
+        {data ? (
+          data.map((d) => (
+            <div className="item">
+              <a href={d.url}>
+                <img src={d.img} alt="" />
+              </a>
+              <h3>{d.title}</h3>
+            </div>
+          ))
+        ) : (
+          <h1>I will lern too</h1>
+        )}
       </div>
     </div>
   );
