@@ -1,5 +1,5 @@
 import "./portfolio.scss"
-import Blog from "../../assets/BlogApp.png";
+ 
 import PortfolioList from "../portfolioList/PortfolioList";
 import { useState } from "react";
 import { featuredPortfolio, mobilePortfolio, webPortfolio, contentPortfolio } from "../../data";
@@ -38,7 +38,7 @@ const Portfolio = () => {
         setData(webPortfolio);
         break;
       case "mobile":
-        setData(mobilePortfolio);
+        setData("");
         break;
       case "content":
         setData(contentPortfolio);
@@ -63,12 +63,13 @@ const Portfolio = () => {
         ))}
       </ul>
       <div className="container">
-        {data.map((d) => (
+        {data ? data.map((d) => (
           <div className="item">
             <img src={d.img} alt="" />
             <h3>{d.title}</h3>
           </div>
-        ))}
+        )) : <h1 >I will lern too</h1>}
+        
       </div>
     </div>
   );

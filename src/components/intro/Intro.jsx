@@ -1,6 +1,5 @@
 import "./intro.scss";
-import man from "../../assets/man.png";
-import down from "../../assets/down.png";
+
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
 
@@ -20,7 +19,7 @@ const Intro = () => {
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
-          <img src={man} alt="" />
+          <img src="assets/man.png" alt="" />
         </div>
       </div>
       <div className="right">
@@ -32,7 +31,7 @@ const Intro = () => {
           </h3>
         </div>
         <a href="#portfolio">
-          <img src={down} alt="a" />
+          <img src="assets/down.png" alt="a" />
         </a>
       </div>
     </div>

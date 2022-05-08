@@ -1,17 +1,17 @@
 import "./topbar.scss";
 import { Person, Mail } from "@material-ui/icons";
-import logo from "../../assets/logo.png";
-import halo from "../../assets/Halo.png";
-import halo1 from "../../assets/Halo1.png";
+ 
 const Topbar = ({ menuOpen, setMenuOpen }) => {
   return (
     <div className={"topbar " + (menuOpen && " active")}>
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
-            <img src={logo} alt="logo" />
-            <img src={menuOpen ? halo1 : halo} alt="logo" />
-              
+            <img src="assets/logo.png" alt="logo" />
+            <img
+              src={menuOpen ? "assets/Halo1.png" : "assets/Halo.png"}
+              alt="logo"
+            />
           </a>
 
           <div className="itemContainer">

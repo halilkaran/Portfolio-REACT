@@ -1,6 +1,6 @@
 import "./works.scss";
  
-import arrow from "../../assets/arrow.png";
+ 
 import { useState } from "react";
  
 const Works = () => {
@@ -61,13 +61,13 @@ const Works = () => {
         ))}
       </div>
       <img
-        src={arrow}
+        src="assets/arrow.png"
         alt="a"
         className="arrow left"
         onClick={() => handleclick("left")}
       />
       <img
-        src={arrow}
+        src="assets/arrow.png"
         alt="b"
         className="arrow right"
         onClick={() => handleclick()}
