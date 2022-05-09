@@ -1,18 +1,31 @@
 import "./intro.scss";
-
-import { init } from "ityped";
+import Typed from "typed.js";
+ 
 import { useEffect, useRef } from "react";
 
 const Intro = () => {
-  const textRef = useRef();
-
+  const el = useRef();
+  	const typed = useRef(null);
+ console.log("aaa");
   useEffect(() => {
-    init(textRef.current, {
-      backDelay: 1500,
-      backSpeed: 60,
-      showCursor: true,
-      strings: ["Web Developer"]
-    });
+     const options = {
+       strings: [
+         "Front-End <i>Web</i> Developer",
+         "Back-End <strong>Web</strong> Developer",
+         "Full-Stack Web Developer &copy;"
+       ],
+       typeSpeed: 100,
+       backSpeed: 50
+     };
+
+     // elRef refers to the <span> rendered below
+     typed.current = new Typed(el.current, options);
+
+     return () => {
+       // Make sure to destroy Typed instance during cleanup
+       // to prevent memory leaks
+       typed.current.destroy();
+     };
   }, []);
 
   return (
@@ -27,7 +40,7 @@ const Intro = () => {
           <h2>Hi There, I'm </h2>
           <h1> Halil Karan</h1>
           <h3>
-            Full-Stack <span ref={textRef}></span>
+            Full-Stack <span ref={el}></span>
           </h3>
         </div>
         <a href="#portfolio">
