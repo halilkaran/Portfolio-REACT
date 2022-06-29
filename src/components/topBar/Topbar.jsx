@@ -19,8 +19,8 @@ const Topbar = ({ menuOpen, setMenuOpen }) => {
           <div className="itemContainer">
             <Person className="icon" />
             <span>
-              <div class="col-12 col-sm-4">
-                <i class="fab fa-whatsapp"></i>
+              <div className="col-12 col-sm-4">
+                <i className="fab fa-whatsapp"></i>
 
                 <a
                   style={{ textDecoration: "none", color: "black" }}
