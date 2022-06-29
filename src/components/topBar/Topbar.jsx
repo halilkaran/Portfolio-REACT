@@ -16,11 +16,34 @@ const Topbar = ({ menuOpen, setMenuOpen }) => {
 
           <div className="itemContainer">
             <Person className="icon" />
-            <span> +49 176 70104713 </span>
+            <span>
+              <div class="col-12 col-sm-4">
+                <i class="fab fa-whatsapp"></i>
+
+                <a
+                  style={{ textDecoration: "none", color: "black" }}
+                  href="https://wa.me/+4917670104713 "
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  +49 176 70104713
+                </a>
+              </div>
+            </span>
           </div>
           <div className="itemContainer">
             <Mail className="icon" />
-            <span> halilkarancontact@gmail.com </span>
+            <span>
+              {" "}
+              <a
+                style={{ textDecoration: "none", color: "black" }}
+                href="mailto:halilkarancontact@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                halilkarancontact@gmail.com
+              </a>{" "}
+            </span>
           </div>
         </div>
         <div className="right">
